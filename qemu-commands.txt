@@ -1,0 +1,5 @@
+Ctrl-a c
+(qemu) xp/20i 0x8000000
+(qemu) info registers
+(qemu) info roms
+(qemu) info mtree
