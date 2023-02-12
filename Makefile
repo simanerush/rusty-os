@@ -1,8 +1,8 @@
-LIBREEDOS=target/riscv64gc-unknown-none-elf/debug/libreedos.a
+LIBRUSTYOS=target/riscv64gc-unknown-none-elf/debug/librustyos.a
 
 build:
 	cargo build
-	riscv64-unknown-elf-ld -Thello.ld $(LIBREEDOS) -o hello.ELF
+	riscv64-unknown-elf-ld -Thello.ld $(LIBRUSTYOS) -o hello.ELF
 
 run: build
 	echo "Ctrl-a x to quit qemu"
