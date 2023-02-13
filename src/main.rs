@@ -18,9 +18,10 @@ pub extern "C" fn _hello_main() -> ! {
     let mut num1 = 0_u64;
     let mut num2 = 1_u64;
     let mut res = 0_u64;
+    let mut i = 0_u16;
 
     // compute fibonacci sequence
-    loop {
+    while i < 10 {
         #[cfg(target_arch="riscv64")]
         unsafe {
             asm!(
@@ -33,5 +34,10 @@ pub extern "C" fn _hello_main() -> ! {
                 num2 = inout(reg) num2,
             );
         }
+        i += 1;
+    }
+
+    loop {
+        // loop forever
     }
 }
